@@ -40,7 +40,7 @@ int main(){
     }
     sort(ret.begin(), ret.end());
     cout << ret.size() << "\n";
-    for(int a : ret) cout << a << " ";
+    for(int a : ret) cout << a << "\n";
 
     return 0;
 }
