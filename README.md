@@ -4,6 +4,17 @@ Algorithm Study Note
 
 <br>
 
+# permutaion
+
+順序が決まっている任意の集合を異なる順序に混ぜる演算
+
+### 特徴
+n個の集合でn個を選ぶpermutaionの数はn!
+実装方法は以下の２つある
+next_permutaion : 昇順
+prev_permutaion : 降順
+
+
 # map とは
 
 map は key を基盤で(key - value)で行っている整列なコンテイナー。
