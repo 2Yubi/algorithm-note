@@ -9,11 +9,16 @@ Algorithm Study Note
 順序が決まっている任意の集合を異なる順序に混ぜる演算
 
 ### 特徴
-n個の集合でn個を選ぶpermutaionの数はn!
-実装方法は以下の２つある
-next_permutaion : 昇順
-prev_permutaion : 降順
+n個の集合でn個を選ぶpermutaionの数はn!<br>
+実装方法は以下の２つある<br>
+- next_permutaion : 昇順<br>
+- prev_permutaion : 降順
+<br><br>
 
+next_permutaionを実装するには配列を"昇順に整列してからする"
+
+
+<br>
 
 # map とは
 
