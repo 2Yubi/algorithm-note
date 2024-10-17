@@ -20,6 +20,14 @@ next_permutaionを実装するには配列を"昇順に整列してからする"
 
 <br>
 
+### リカーシブ関数でpermutaion実装
+
+
+
+
+
+
+
 # map とは
 
 map は key を基盤で(key - value)で行っている整列なコンテイナー。
@@ -36,6 +44,7 @@ map は key を基盤で(key - value)で行っている整列なコンテイナ�
 
 * if(mp.find(1) == mp.end()){...}このロジックだと参照なしで map の値の有無を確認できる
 
+<br>
 
 # set とは
 
