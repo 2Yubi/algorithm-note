@@ -31,9 +31,6 @@ int main(){
 
 
 // 2. forで実装
-
-
-
 // int n = 5, k = 3, a[5] = {1, 2, 3, 4, 5};
 // void combi(int start, vector<int> b){
 //     if(b.size() == k){
