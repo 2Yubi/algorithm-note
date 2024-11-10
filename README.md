@@ -48,6 +48,61 @@ map は key を基盤で(key - value)で行っている整列なコンテイナ�
 
 * if(mp.find(1) == mp.end()){...}このロジックだと参照なしで map の値の有無を確認できる
 
+### 機能
+1. insert({value1, value2}) : valueをmapに追加
+2. size()                   : mapのサイズ
+3. erase(value)             : 要素を削除
+4. find(value)              : 要素を探索
+5. for(auto it = mp.begin(); it != mp.end(); it++): mapにある要素を巡回
+
+
+1. push(value) : valueをキューに追加
+2. pop()       : 一番前の要素を削除
+3. size()      : キューのサイズ
+4. front()     : 一番前の要素を参照
+
+```
+#include<bits/stdc++.h>
+using namespace std;
+map<string, int> mp;
+string a[] = {"aaa", "bbb", "ccc"};
+int main(){
+	for(int i = 0; i < 3; i++){
+		mp.insert({a[i], i+1});
+//		mp[a[i]] = i + 1;
+	}
+	
+	cout << mp["ccc"] << "\n";
+	
+	mp["ddd"] = 4;
+	cout << mp.size() << "\n";
+	
+	mp.erase("ddd");
+	auto it = mp.find("ddd");
+	if(it == mp.end()){
+		cout << "No value...\n";
+	}
+	
+	mp["ddd"] = 100;
+	it = mp.find("ddd");
+	if(it != mp.end()){
+		cout << (*it).first << " : " << (*it).second << "\n";
+	}
+	
+	// loop
+	for(auto it : mp){
+		cout << it.first << " : " << it.second << "\n";
+	}
+	for(auto it = mp.begin(); it != mp.end(); it++){
+		cout << (*it).first << " : " << (*it).second << "\n";
+	}
+
+	return 0;
+}
+```
+
+
+
 <br>
 <br>
 
