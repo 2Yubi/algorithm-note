@@ -2,9 +2,19 @@
 2024<br>
 Algorithm Study Note
 
+1. Data structure
+2. Graph theory
+
 <br>
 
-# permutaion
+# 1. Data structure
+1. permutaion
+2. combination 
+3. 
+
+<br>
+
+## #1. permutaion
 
 順序が決まっている任意の集合を異なる順序に混ぜる演算
 
@@ -25,14 +35,14 @@ next_permutaionを実装するには配列を"昇順に整列してからする"
 
 <br>
 
-# combination
+## #2. combination
 
 順序など関係なく、何人か、いくつかを選ぶ時に使用
 
 <br>
 <br>
 
-# map とは
+## #3. map とは
 
 map は key を基盤で(key - value)で行っている整列なコンテイナー。
 挿入、削除、修正、探索の時間計算は O(logN)
@@ -106,7 +116,7 @@ int main(){
 <br>
 <br>
 
-# set とは
+## #4. set とは
 
 set は固有の要素のみを格納するコンテナ
 
@@ -142,7 +152,7 @@ int main(){
 <br>
 <br>
 
-# queue とは
+## #5. queue とは
 queueは(FIFO, First In First Out)<br>
 先に入れたものが、先に出るデータ構造
 
@@ -173,7 +183,7 @@ int main(){
 <br>
 <br>
 
-# deque とは
+## #6. deque とは
 前後に挿入、削除、参照が可能なデータ構造
 
 ### 機能
@@ -187,4 +197,42 @@ int main(){
 <br>
 <br>
 
-# タイプ
+## #7. タイプ型変換関数
+
+1. stoi = string to int <br>
+2. stof = string to float <br>
+3. stol = string to long <br>
+4. stod = string to double <br>
+
+5. ceil(value) = 
+6. floor(value) = 
+
+
+<br>
+
+# 2. Graph theory
+1. Binary Search Tree
+
+<br>
+<br>
+
+## #1. Binary Search Tree
+
+### DFS(Depth First Search)
+隣接するノードを再帰的に訪問し、訪問した頂点は再訪問せず、各四半期ごとに
+可能な限り最も遠くにあるノードまで探索するアルゴリズム
+
+
+<br>
+<br>
+
+
+### BFS(Breadth First Search)
+BFSはグラフを探索するアルゴリズムであり、あるノードから始めて次の深さのノードに移動する前に、
+現在の深さのすべてのノードを探索し、訪問したノードは再訪問しないアルゴリズム
+
+
+
+
+
+
