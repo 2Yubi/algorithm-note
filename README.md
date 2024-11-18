@@ -223,6 +223,8 @@ int main(){
 可能な限り最も遠くにあるノードまで探索するアルゴリズム
 
 
+
+
 <br>
 <br>
 
@@ -231,6 +233,30 @@ int main(){
 BFSはグラフを探索するアルゴリズムであり、あるノードから始めて次の深さのノードに移動する前に、
 現在の深さのすべてのノードを探索し、訪問したノードは再訪問しないアルゴリズム
 
+```
+queue<pair<int, int>> q;
+
+void bfs(int y, int x){
+    visited[y][x] = 1;
+    q.push({y, x});
+
+    while(q.size()){
+        tie(y, x) = q.front(); q.pop();
+
+        for(int i = 0; i < 4; i++){
+            int ny = dy[i] + y;
+            int nx = dx[i] + x;
+
+            if(ny < 0 || ny >= n || nx < 0 || nx >= m) continue;
+
+            if(adj[ny][nx] && !visited[ny][nx]){
+                visited[ny][nx] = visited[y][x] + 1;
+                q.push({ny, nx});
+            }
+        }
+    }
+}
+```
 
 
 

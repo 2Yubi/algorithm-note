@@ -1,45 +1,37 @@
+// you can use includes, for example:
+// #include <algorithm>
 #include<bits/stdc++.h>
 using namespace std;
-int n, m, ret;
-int adj[104][104];
-bool visited[104][104];
-const int dy[] = {-1, 0, 1, 0};
-const int dx[] = {0, 1, 0, -1};
-
+bool visited[700][700];
+const int dy[4] = {-1, 0, 1, 0}, dx[4] = {0, 1, 0, -1};
+int ret;
+// you can write to stdout for debugging purposes, e.g.
+// cout << "this is a debug message" << endl;
 void dfs(int y, int x){
-    visited[y][x] = 1;
-
+    visited[y][x] = true;
     for(int i = 0; i < 4; i++){
         int ny = dy[i] + y;
         int nx = dx[i] + x;
 
         if(ny < 0 || ny >= n || nx < 0 || nx >= m) continue;
 
-        if(adj[ny][nx] && !visited[ny][nx]){
+        if(A[ny][nx] && !visited[ny][nx]){
             dfs(ny, nx);
         }
     }
     return;
 }
 
-int main(){
-    cin >> n >> m;
-    
-    for(int i = 0; i < n; i++){
-        for(int j = 0; j < m; j++){
-            cin >> adj[i][j];
-        }
-    }
+int solution(vector< vector<bool> > &A) {
+    // Implement your solution here
+    fill(&visited[0][0], &visited[0][0] + 700 * 700, 0); 
 
-    for(int i = 0; i < n; i++){
-        for(int j = 0; j < m; j++){
-            if(adj[i][j] && !visited[i][j]){
+    for(int i = 0; i < A.size(); i++){
+        for(int j = 0; j < A[i].size(); j++){
+            if(A[i][j] && !visited[i][j]){
                 dfs(i, j);
                 ret++;
             }
         }
     }
-
-    cout << ret << "\n";
-    return 0;
 }
