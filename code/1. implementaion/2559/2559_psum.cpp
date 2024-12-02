@@ -13,7 +13,6 @@ int main(){
         ret = max(ret, psum[i] - psum[i - k]);
     }
 
-
     cout << ret << "\n";
 
     return 0;
