@@ -214,6 +214,74 @@ int main(){
 
 ## #8. psum
 
+```
+int main(){
+    cin >> n >> k;
+
+    for(int i = 1; i <= n; i++){
+        cin >> temp;
+        psum[i] = psum[i - 1] + temp;
+    }
+
+    for(int i = k; i <= n; i++){
+        ret = max(ret, psum[i] - psum[i - k]);
+    }
+
+    cout << ret << "\n";
+
+    return 0;
+}
+```
+
+## #9. insert
+string型の中に文字列を入れ込む
+
+```
+if(mid) ret.insert(ret.begin() + ret.size()/2, mid);
+```
+
+
+## #10. scanf, getline
+
+1. scanf
+```
+int a;
+double b;
+char c;
+int main(){
+	scanf("%d %lf %c", &a, &b, &c);
+	printf("%d\n", a);
+	printf("%lf\n", b);
+	printf("%c\n", c);
+	return 0;
+}
+
+/*
+	23330
+	233.23123
+	a
+
+	23330
+	233.231230
+	a
+*/
+```
+
+2. getline<br>
+空欄を含めて文字列を入力してもらう場合
+
+```
+#include<bits/stdc++.h>
+using namespace std;
+string s;
+int main(){
+30
+getline(cin, s);
+cout << s << '\n';
+return 0;
+}
+```
+
 
 
 
