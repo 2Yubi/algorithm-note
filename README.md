@@ -282,6 +282,8 @@ return 0;
 }
 ```
 
+## #11. fill
+fill(&arr, &arr + 51 * 51, 0);
 
 
 
